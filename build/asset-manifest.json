@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5060907.css",
+    "main.js": "/static/js/main.7f62ec29.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/hotel1.jpg": "/static/media/hotel1.863847386779031c2646.jpg",
+    "static/media/sunset-pool.jpg": "/static/media/sunset-pool.29398abae160242f8bdd.jpg",
+    "static/media/user5.jpg": "/static/media/user5.44d43473c5734d5a436c.jpg",
+    "static/media/hotel2.jpg": "/static/media/hotel2.3674200118159056d5ff.jpg",
+    "static/media/umbrella-chair.jpg": "/static/media/umbrella-chair.faae523d4ef0e7288b11.jpg",
+    "static/media/twig-near-ceramic-cups.jpg": "/static/media/twig-near-ceramic-cups.a3bdd0595dd034510cf8.jpg",
+    "static/media/dried-twigs-dark-surroundings (1).jpg": "/static/media/dried-twigs-dark-surroundings (1).6d78c21d3e0f2a75e3a6.jpg",
+    "static/media/empty-gazebo-garden.jpg": "/static/media/empty-gazebo-garden.5b8243e241bd8ec81876.jpg",
+    "static/media/Testimoials4.png": "/static/media/Testimoials4.24092851d5be62980ef0.png",
+    "static/media/Testimoials3.png": "/static/media/Testimoials3.3097f268590f510d3ac3.png",
+    "static/media/Testimoials1.png": "/static/media/Testimoials1.f8eaa2e8e7944e43caa2.png",
+    "static/media/Testimoials5.png": "/static/media/Testimoials5.043a851b3b1ece4d5c4d.png",
+    "static/media/Testimoials2.png": "/static/media/Testimoials2.692fde843f00a4e4eba8.png",
+    "index.html": "/index.html",
+    "main.a5060907.css.map": "/static/css/main.a5060907.css.map",
+    "main.7f62ec29.js.map": "/static/js/main.7f62ec29.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5060907.css",
+    "static/js/main.7f62ec29.js"
+  ]
+}

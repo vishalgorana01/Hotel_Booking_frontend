@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.hideScrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.traverse{
+    background-color: rgb(7, 47, 112);
+    /* border-left: 2px solid rgb(11, 36, 75); */
+    border: 2px solid rgb(11, 36, 75);
+    width: 100%;
+    overflow: hidden;
+}
+.traverse:hover{
+    background-color: white;
+    color: black;
+}
+
+.datePicker{
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.RoomDates{
+    display: none;
+}
+
+
+@media (max-width: 550px) {
+    .RoomDates{
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 410px) {
+    .traverse{
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.hideScrollbar::-webkit-scrollbar{
+    display: none;
+}
+
+.modifiedScrollbar::-webkit-scrollbar{
+    height: 40px;
+    width: 4px;
+    background: none;
+    color: aqua;
+}
+
+.modifiedScrollbar::-webkit-scrollbar-thumb{
+    background: #8044c4;
+}

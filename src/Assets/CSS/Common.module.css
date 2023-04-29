@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.hideScrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.increasePadding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media (max-width: 640px) {
+    .increasePadding {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

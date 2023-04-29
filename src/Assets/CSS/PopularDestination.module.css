@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+.destinationsDetails{
+    text-align: start;
+}
+
+@media (max-width: 767px) {
+    .destinationsDetails{
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .destinationsPhoto{
+        grid-template-columns: 1fr;
+    }
+}
