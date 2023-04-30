@@ -96,7 +96,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col snap-center h-full w-80 mr-2.5 shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:mx-2.5  sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[0].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col items-center z-20 bg-slate-50 justify-center py-2 px-3'>
-                  <h2 ref={allHotelName} className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName} className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>
@@ -110,7 +110,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col w-80 mx-2.5 h-full snap-center shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[1].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col items-center z-20 bg-slate-50 justify-center py-2 px-3'>
-                  <h2 ref={allHotelName}  className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName}  className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>
@@ -123,7 +123,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col w-80 mx-2.5 h-full snap-center shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[2].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col z-20 bg-slate-50 items-center justify-center py-2 px-3'>
-                  <h2 ref={allHotelName}  className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName}  className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>
@@ -136,7 +136,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col w-80 mx-2.5 h-full snap-center shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[3].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col items-center z-20 bg-slate-50 justify-center py-2 px-3'>
-                  <h2 ref={allHotelName} className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName} className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>
@@ -149,7 +149,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col w-80 mx-2.5 h-full snap-center shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[4].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col items-center z-20 bg-slate-50 justify-center py-2 px-3'>
-                  <h2 ref={allHotelName} className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName} className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>
@@ -162,7 +162,7 @@ export default function TrendingHotel() {
               <div className='relative flex flex-col w-80 ml-2.5 h-full snap-center shadow-md overflow-hidden shadow-indigo-500/40  rounded-sm sm:w-auto sm:mx-2.5 sm:my-2.5' style={{ borderBottom: '1px solid #0b244b42' }}>
                 <img ref={(ele) =>allHotelImages(ele)} className="hover:cursor-pointer transition-all ease-in-out duration-300 hover:scale-125" onClick={() =>hotelDescription(refName.current[5].innerHTML)} src={hotel1} alt="error loading" />
                 <div className='flex flex-col items-center z-20 bg-slate-50 justify-center py-2 px-3'>
-                  <h2 ref={allHotelName} className='py-1 text-center'>Hotel Name</h2>
+                  <h2 ref={allHotelName} className='py-1 text-lg text-blue-500 text-center'>Hotel Name</h2>
                   <span ref={allHotelLocation}><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Location</span>
                 </div>
                 <div className='flex items-center justify-between px-4 py-1' style={{borderTop: "1px solid #00000033"}}>

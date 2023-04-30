@@ -47,7 +47,7 @@ function PopularDestinations() {
                     </div>
                 </div>
 
-                <div className={`${styles.destinationsPhoto} grid px-4 gap-3 grid-cols-2 w-full md:grid-cols-3 `}>
+                <div className={`grid px-4 gap-3 grid-cols-1 sm:grid-cols-2 w-full md:grid-cols-3 `}>
                     <div onMouseEnter={()=>left(0)} onMouseLeave={()=>Right(0)} onClick={() => getDestinationHotels('Bhopal')} className={`relative w-full rounded-sm flex item-center justify-center cursor-pointer forHover`}>
                         <img className='rounded-sm' src={destinations} alt="error laoding" />
                         <div className='flex items-end justify-start bg-blend-darken absolute w-full h-full top-0 left-0' style={{ backgroundColor: 'rgb(0 3 8 / 74%)' }}>

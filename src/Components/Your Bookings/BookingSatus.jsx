@@ -288,9 +288,25 @@ function BookingSatus() {
                     </div>
 
                     {/* Modal for inComplete Booking */}
-                    <div className='flex items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }}>
-                        <div className='flex items-center justify-center relative py-8 h-auto rounded-sm w-full max-w-6xl' style={{ border: '2px solid red', backgroundColor: 'ghostwhite' }}>
-                            <span className='flex px-3 flex-col items-center justify-center w-full'>
+                    <div className='hidden items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }}>
+                         <div className='flex flex-col items-center justify-center relative px-3 sm:px-6 py-8 h-auto rounded-sm w-full max-w-5xl' style={{ border: '2px solid red', backgroundColor: 'ghostwhite' }}>
+
+                            <span className='flex items-center justify-start flex-col w-full'>
+                                <span className='flex flex-col items-start gap-x-5 gap-y-3 py-6 px-6 justify-center w-full md:flex-row' style={{backgroundColor: '#00800033'}}>
+                                    <span className='flex items-start md:justify-center w-28'><i style={{fontSize:'5.5rem'}} className="fa-sharp text-green-600 fa-solid fa-clipboard-check"></i></span>
+                                    <span className='flex flex-col gap-y-2 items-start justify-center w-full'>
+                                        <h1 className='text-xl font-semibold text-black'>Booking Confirmed</h1>
+                                        <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci inventore, voluptatum esse corrupti alias repudiandae modi, ad tenetur at veritatis placeat animi voluptates laborum.</p>
+                                    </span>
+                                </span>
+
+                                <span className='flex w-full'>
+
+                                </span>
+
+                            </span>
+
+                            {/*<span className='flex px-3 flex-col items-center justify-center w-full'>
                                 <span className='flex gap-x-3 gap-y-5 items-start justify-center py-3 px-2 w-full flex-col md:flex-row'>
                                     <span className='w-60'>
                                         <img src={hotelImg} alt="loading error" />
@@ -377,8 +393,8 @@ function BookingSatus() {
                                     </span>
                                 </span>
 
-                            </span>
-                        </div>
+                            </span>*/}
+                        </div> 
                     </div>
 
                 </div>

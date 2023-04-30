@@ -80,7 +80,7 @@ export default function PopularHotels() {
     return (
         <>
             <div className='flex flex-col h-auto w-full text-sm sm:p-7 md:p-7 xl:p-0 xl:w-8/12 '>
-                <div className='flex items-center w-full justify-start py-3 text-lg'>
+                <div className='flex items-center w-full justify-start py-3 text-3xl'>
                     Popular hotels
                 </div>
 
@@ -89,7 +89,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" onClick={() => getPopularHotels(refPopularHotelsName.current[0].innerHTML)} src={image1} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[0].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[0].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>
@@ -104,7 +104,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" onClick={() => getPopularHotels(refPopularHotelsName.current[1].innerHTML)} src={image1} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[1].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[1].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>
@@ -119,7 +119,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" src={image1} onClick={() => getPopularHotels(refPopularHotelsName.current[2].innerHTML)} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[2].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[2].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>
@@ -134,7 +134,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" src={image1} onClick={() => getPopularHotels(refPopularHotelsName.current[3].innerHTML)} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[3].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[3].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>
@@ -149,7 +149,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" src={image1} onClick={() => getPopularHotels(refPopularHotelsName.current[4].innerHTML)} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[4].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[4].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>
@@ -164,7 +164,7 @@ export default function PopularHotels() {
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" src={image1} onClick={() => getPopularHotels(refPopularHotelsName.current[5].innerHTML)} alt="" />
                         <div className='flex flex-col my-2 items-center justify-center'>
-                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-md text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[5].innerHTML)}>Hotel name</h3>
+                            <h3 ref={(ele) => pushRefPopularHotelsName(ele)} className='mt-3 text-center mt text-lg text-blue-500 cursor-pointer' onClick={() => getPopularHotels(refPopularHotelsName.current[5].innerHTML)}>Hotel name</h3>
                             <span ref={(ele) => pushRefPopularHotelsLocation(ele)} className='flex items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i>Hotel Location</span>
                             <span className='flex mt-3.5 items-center justify-center'><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i><i className="fa-sharp fa-solid fa-location-dot mr-2"></i></span>
                             <p className='text-center text-sm'>123 reviews</p>

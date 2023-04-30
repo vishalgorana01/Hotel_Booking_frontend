@@ -45,7 +45,7 @@ export default function UserNavbar(props) {
             <section className='absolute t-0 w-screen overflow-x-hidden' style={{backgroundColor: `${props.bgColor}`}}>
                 <nav className={`flex items-center max-h-20 justify-center w-full py-1 md:py-2`}>
                     <div className={`flex items-center justify-between w-11/12 py-2 max-w-7xl`}>
-                        <div className='text-cyan-100 font-medium cursor-pointer'>logo</div>
+                        <div className='text-cyan-100 text-xl font-medium cursor-pointer'>Hotlieo</div>
                         <ul className='items-center justify-center py-2 text-cyan-200 hidden md:flex'>
                             <li className='py-1 px-3 cursor-pointer'><a href='/Home' className={activeUrl.home?styles.active:''}>Home</a></li>
                             <li className='py-1 px-3 cursor-pointer ease-linear duration-200 hover:-translate-y-1'><a href='/YourBookings' className={activeUrl.yourBooking?styles.active:''}>Your Bookings</a></li>
@@ -60,9 +60,9 @@ export default function UserNavbar(props) {
                 </nav>
 
                 {/* Logged In User Siderbar */}
-                <div className='-translate-x-full z-10 px-4 py-1 flex-col fixed h-full w-60 top-0 left-0 ' style={{ background: "#020d1e" }} ref={sideBar}>
+                <div className='-translate-x-full z-20 px-4 py-1 flex-col fixed h-full w-60 top-0 left-0 ' style={{ background: "#020d1e" }} ref={sideBar}>
                     <div className='flex py-1 px-1 absolute right-3 top-3 my-2 mx-2 font-medium' onClick={hideSideBar}><i className="fa-sharp fa-solid fa-xmark text-cyan-200"></i></div>
-                    <div className='text-cyan-50 text-xl py-1 my-2 mb-4 text-start'>logo</div>
+                    <div className='text-cyan-50 text-xl font-medium py-1 my-2 mb-4 text-start'>Hotlieo</div>
                     <ul className='flex justify-start flex-col text-cyan-50'>
 
                         <span className='flex items-center justify-start py-1 px-2 cursor-pointer bg-slate-400 rounded-sm mb-4' style={{backgroundColor: "#172539"}}><i className="fa-solid fa-magnifying-glass"></i><input type="text" className='outline border-none outline-none bg-transparent px-2' placeholder='Search'/></span>

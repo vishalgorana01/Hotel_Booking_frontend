@@ -20,7 +20,7 @@ export default function Home() {
       <UserNavbar></UserNavbar>
       <section className='flex w-screen h-screen items-center justify-center' id={styles.HomeBg}>
         <div className='flex flex-col max-w-7xl justify-center items-center'>
-          <h1 className='text-cyan-200 leading-12 text-4xl mb-4  sm:mb-16 w-9/12 sm:text-6xl sm:w-9/12 md:text-6xl text-center md:w-7/12 '>Welcome To Our Logo</h1>
+          <h1 className='text-cyan-200 leading-12 text-4xl mb-4  sm:mb-16 w-9/12 sm:text-6xl sm:w-9/12 md:text-6xl text-center md:w-7/12 '>Welcome To Our Hotlieo</h1>
           <span className='text-cyan-200 text-center mb-4  sm:mb-16 px-4 w-full sm:px-3 sm:w-10/12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur est nisi culpa possimus possimus, excepturi!</span>
           <span className='py-1.5 px-5 cursor-pointer rounded-sm text-cyan-200 bg-red-500 mx-3 ease-linear duration-200 hover:-translate-y-1'><button className='py-1'>Discover Now</button></span>
         </div>

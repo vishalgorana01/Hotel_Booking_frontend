@@ -174,7 +174,7 @@ function HotelsByLocation() {
         if (ele.city === givenFilter.cityName) {
           return (
             <div key={index} ref={(ele) => pushFiltersRef(ele)}>
-              <span key={index} className='absolute top-0 right-0 text-2xl text-black sm:text-3xl lg:hidden' onClick={() => showLeftDiv()}><i className="fa-solid fa-list-ul"></i></span>
+              <span key={index} className='absolute top-0 right-0 text-2xl text-black sm:text-3xl lg:hidden' onClick={() => showLeftDiv()}><i className="fa-solid fa-list-ul hidden"></i></span>
 
               <span className='flex flex-col items-start gap-x-3 justify-center w-full p-3 sm:p-4' style={{ border: '1px solid black' }}>
                 <img className='h-32 lg:block mb-1.5' src={image1} alt="loading error" />
