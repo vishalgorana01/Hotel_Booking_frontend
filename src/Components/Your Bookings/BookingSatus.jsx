@@ -288,7 +288,7 @@ function BookingSatus() {
                     </div>
 
                     {/* Modal for inComplete Booking */}
-                    <div className='hidden items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }}>
+                    <div className='flex items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }}>
                         <div className='flex items-center justify-center relative py-8 h-auto rounded-sm w-full max-w-6xl' style={{ border: '2px solid red', backgroundColor: 'ghostwhite' }}>
                             <span className='flex px-3 flex-col items-center justify-center w-full'>
                                 <span className='flex gap-x-3 gap-y-5 items-start justify-center py-3 px-2 w-full flex-col md:flex-row'>

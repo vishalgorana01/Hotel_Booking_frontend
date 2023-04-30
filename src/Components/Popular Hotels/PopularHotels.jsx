@@ -84,7 +84,7 @@ export default function PopularHotels() {
                     Popular hotels
                 </div>
 
-                <div className='grid grid-cols-2 items-center w-full gap-2 justify-center flex-wrap sm:grid-cols-2 sm:text-sm md:grid-cols-3 md:text-md'>
+                <div className='grid grid-cols-1 items-center w-full gap-2 justify-center flex-wrap sm:grid-cols-2 sm:text-sm md:grid-cols-3 md:text-md'>
 
                     <div className='relative overflow-x-hidden flex flex-col w-full h-full shadow-lg rounded-md shadow-black' style={{ borderBottom: "1px solid #00000033" }}>
                         <img ref={(ele) => pushRefPopularHotelsCoverImage(ele)} className="cursor-pointer rounded-sm" onClick={() => getPopularHotels(refPopularHotelsName.current[0].innerHTML)} src={image1} alt="" />
