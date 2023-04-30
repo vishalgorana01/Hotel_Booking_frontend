@@ -65,7 +65,7 @@ export default function Login() {
     // })
     
     if (user.userName_Email && user.password) {
-      await axios.post(`${utilities.base_url}/api/auth/login`, user)
+      await axios.post(`${utilities.deploy_url}/api/auth/login`, user)
         .then((resp) => {
           console.log(resp)
 
@@ -116,7 +116,7 @@ export default function Login() {
             <input className={styles.inputs} type="email" name='password' value={user.password} id={styles.userName} placeholder='password' onChange={handleChange} onClick={handleEmail} />
             <p className={styles.wrongInput} ref={emptyPassword}>*required</p>
           </label>
-          <button type='button' className={styles.buttons} onClick={login} style={{marginBottom: "0px"}} >Login</button>
+          <button type='button' className={`w-64 sm:w-3/5 py-2.5 px-3 text-lg text-center text-white`} onClick={login} style={{marginBottom: "0px", backgroundColor: 'brown', borderRadius: '350px'}} >Login</button>
 
           <label htmlFor="" className={`${styles.labels} flex justify-between`} style={{marginTop: "0px", background: "none"}}>
             <label htmlFor="" className="flex flex-row items-center justify-center"><i style={{color: "brown"}} className={`${styles.onoff} fa-solid fa-toggle-off mr-2 hover:cursor-pointer`}></i><p className="text-white text-us7" style={{fontSize: "10px" , color: "brown"}}>keep logged in</p></label>
