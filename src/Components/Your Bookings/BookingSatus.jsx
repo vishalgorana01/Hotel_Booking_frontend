@@ -101,7 +101,7 @@ function BookingSatus() {
                     let j = 1;
                     let k = 1;
                     // For Incomplete Bookings
-                    setIncompleteBookings(resp.data.map((ele, index) => {
+                    setIncompleteBookings(resp.data.reverse().map((ele, index) => {
                         if (ele.status == "incomplete") {
                             const startDate = new Date(ele.startDate);
                             const endDate = new Date(ele.endDate);
@@ -141,7 +141,7 @@ function BookingSatus() {
                     }))
 
                     // For Pending Bookings
-                    setPendingBookings(resp.data.map((ele, index) => {
+                    setPendingBookings(resp.data.reverse().map((ele, index) => {
                         if (ele.status == 'payment pending') {
                             const startDate = new Date(ele.startDate);
                             const endDate = new Date(ele.endDate);
@@ -182,7 +182,7 @@ function BookingSatus() {
 
 
                     // for Confirmed Bookings
-                    setConfirmedBookings(resp.data.map((ele, index) => {
+                    setConfirmedBookings(resp.data.reverse().map((ele, index) => {
                         if (ele.status == 'confirmed') {
                             const startDate = new Date(ele.startDate);
                             const endDate = new Date(ele.endDate);

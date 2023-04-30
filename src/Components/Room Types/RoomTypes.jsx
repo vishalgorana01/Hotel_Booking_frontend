@@ -61,7 +61,7 @@ function RoomTypes(props) {
 
     const getRoomDetails = async ()=>{
         try {
-            let hotelInformation = await axios.get(`${utilities.deploy_url}api/hotels/${name}`);
+            let hotelInformation = await axios.get(`${utilities.deploy_url}/api/hotels/${name}`);
             hotelInformation = hotelInformation.data
 
             // console.log("services -> ",(hotelInformation.comfort.roomServices))
