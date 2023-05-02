@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 // import * as dotenv from 'dotenv'
 import axios from 'axios'
 import AdminNavbar from '../Components/NavBars/AdminNavbar'
@@ -17,48 +17,24 @@ import AddHotel from '../Components/Admin Components/Hotels/AddHotel'
 function Admin() {
     // dotenv.config()
 
-    const AdminComponent = () => {
-        // document.body.onload = null
-        if (document.location.href == 'http://localhost:3000/AdminPanel/Dashboard') {
-            return (<Dashboard />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Bookings'){
-            return (<Bookings />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Rooms'){
-            return (<Rooms />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Hotels'){
-            return (<Hotels />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Hotels/addhotel'){
-            return (<AddHotel />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Customers'){
-            return (<Customers />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Payments'){
-            return (<Payments />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Supports'){
-            return (<Support />)
-        }
-        else if(document.location.href == 'http://localhost:3000/AdminPanel/Settings'){
-            return (<Settings />)
-        }
-    }
+    const [AdminComponent, setAdminComponent] = useState(<Dashboard/>)
+
+    // const AdminComponent = () => {
+    //     // document.body.onload = null
+    //     
+    // }
 
     return (
         <>
             <section className='flex items-center justify-center '>
                 <div className='flex h-screen relative w-full items-center justify-between'>
-                    <AdminDashboardSidebar />
+                    <AdminDashboardSidebar setAdminComponent = {setAdminComponent} />
 
                     <div className='flex flex-col items-center justify-start overflow-y-scroll h-full w-full' style={{ backgroundColor: '#021025fc' }}>
                         {/* <div className='w-6/12 bg-red-600' style={{height: '2000px'}}></div> */}
                         <AdminNavbar />
 
-                        <AdminComponent />
+                        {AdminComponent}
                     </div>
                 </div>
             </section>

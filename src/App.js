@@ -29,15 +29,15 @@ function App() {
           <Route path='Booking/Payment' element={<Booking/>}></Route>
           <Route path='/YourBookings' element={<YourBookings/>}></Route>
 
-          <Route path='AdminPanel/Dashboard' element={<Admin/>}></Route>
-          <Route path='AdminPanel/Bookings' element={<Admin/>}></Route>
+          <Route path='AdminPanel' element={<Admin/>}></Route>
+          {/* <Route path='AdminPanel/Bookings' element={<Admin/>}></Route>
           <Route path='AdminPanel/Rooms' element={<Admin/>}></Route>
           <Route path='AdminPanel/Hotels' element={<Admin/>}></Route>
           <Route path='AdminPanel/Hotels/addhotel' element={<Admin/>}></Route>
           <Route path='AdminPanel/Customers' element={<Admin/>}></Route>
           <Route path='AdminPanel/Payments' element={<Admin/>}></Route>
           <Route path='AdminPanel/Supports' element={<Admin/>}></Route>
-          <Route path='AdminPanel/Settings' element={<Admin/>}></Route>
+          <Route path='AdminPanel/Settings' element={<Admin/>}></Route> */}
 
           {/* <Route path='cart' element={<Cart></Cart>}></Route> */}
           {/* <Route path='Bprofile' element={<BuyerProfile></BuyerProfile>}></Route> */}

@@ -1,9 +1,28 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import Dashboard from '../Admin Components/Dashboard';
+import Bookings from '../Admin Components/Bookings/Bookings';
+import Rooms from '../Admin Components/Rooms/Rooms';
+import Customers from '../Admin Components/Customers';
+import Hotels from '../Admin Components/Hotels/Hotels';
+import Payments from '../Admin Components/Payments/Payments';
+import Support from '../Admin Components/Support';
+import Settings from '../Admin Components/Settings';
+import AddHotel from '../Admin Components/Hotels/AddHotel';
+import EditHotel from '../Admin Components/Hotels/EditHotel';
+import DeleteHotel from '../Admin Components/Hotels/DeleteHotel';
+import AddRoom from '../Admin Components/Rooms/AddRoom';
+import EditRoom from '../Admin Components/Rooms/EditRoom';
+import DeleteRoom from '../Admin Components/Rooms/DeleteRoom';
+import AddBooking from '../Admin Components/Bookings/AddBooking';
+import EditBooking from '../Admin Components/Bookings/EditBooking';
+
 export var slideRight;
 
-function AdminDashboardSidebar() {
+function AdminDashboardSidebar(props) {
+    const {setAdminComponent} = props;
+
     const rightArrowRef = useRef([])
     const pushRightArrowRef = (ele) => rightArrowRef.current.push(ele)
 
@@ -101,44 +120,44 @@ function AdminDashboardSidebar() {
             </span>
 
             <ul className='flex items-center justify-center mt-3 gap-4 w-full flex-col px-4 py-2'>
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Dashboard"><i className="fa-sharp text-xl fa-solid fa-square"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Dashboard</b></a></li>
+                <li className=' flex cursor-pointer items-center justify-between w-full text-cyan-100' onClick={()=> setAdminComponent(<Dashboard/>)}><a className='flex items-center justify-center gap-2.5'><i className="fa-sharp text-xl fa-solid fa-square"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Dashboard</b></a></li>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Bookings"><i className="fa-sharp text-xl fa-solid fa-bookmark"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Bookings</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(0)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5 cursor-pointer' onClick={()=> setAdminComponent(<Bookings/>)}><i className="fa-sharp text-xl fa-solid fa-bookmark"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Bookings</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(0)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
                 <span ref={pushDropdownRef} className='relative hidden text-gray-300 px-4 items-start justify-center flex-col gap-3.5 t-0 w-full'>
                     {/* <a className='cursor-pointer pl-4' href="/AdminPanel/Bookings" >All Bookings</a> */}
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/AddBooking">Add Booking</a>
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/EditBooking">Edit Booking</a>
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<AddBooking/>)}>Add Booking</a>
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<EditBooking/>)}>Edit Booking</a>
                 </span>
 
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Rooms"><i className="fa-sharp text-xl fa-solid fa-door-open"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Rooms</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(1)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5 cursor-pointer' onClick={()=> setAdminComponent(<Rooms/>)}><i className="fa-sharp text-xl fa-solid fa-door-open"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Rooms</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(1)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
                 <span ref={pushDropdownRef} className='relative hidden text-gray-300 px-4 items-start justify-center flex-col gap-3.5 t-0 w-full'>
-                    {/* <a className='cursor-pointer pl-4' href="/AdminPanel/Rooms">All Rooms</a> */}
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/addRoom">Add Room</a>
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/editRoom">Edit Room</a>
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/deleteRoom">Delete Room</a>
+                    {/* Throws error for not providing props */}
+                    {/* <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<AddRoom/>)}>Add Room</a> */} 
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<EditRoom/>)}>Edit Room</a>
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<DeleteRoom/>)}>Delete Room</a>
                 </span>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Customers"><i className="text-xl fa-solid fa-user-group"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Customers</b></a></li>
+                <li className=' flex items-center justify-between w-full text-cyan-100 cursor-pointer' onClick={()=> setAdminComponent(<Customers/>)}><a className='flex items-center justify-center gap-2.5' ><i className="text-xl fa-solid fa-user-group"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Customers</b></a></li>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Hotels"><i className="fa-sharp text-xl fa-solid fa-hotel"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Hotels</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(2)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5 cursor-pointer'   onClick={()=> setAdminComponent(<Hotels/>)} ><i className="fa-sharp text-xl fa-solid fa-hotel"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Hotels</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(2)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
                 <span ref={pushDropdownRef} className='relative hidden text-gray-300 px-6 items-start justify-center flex-col gap-3.5 t-0 w-full'>
                     {/* <a className='cursor-pointer pl-4' href="">All Hotels</a> */}
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/Hotels/addhotel">Add Hotel</a>
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/editHotel">Edit Hotel</a>
-                    <a className='cursor-pointer pl-4' href="/AdminPanel/deleteHotel">Delete Hotel</a>
+                    <a className='cursor-pointer pl-4'  onClick={()=> setAdminComponent(<AddHotel/>)}>Add Hotel</a>
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<EditHotel />)} >Edit Hotel</a>
+                    <a className='cursor-pointer pl-4' onClick={()=> setAdminComponent(<DeleteHotel/>)}>Delete Hotel</a>
                 </span>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Payments"><i className="fa-sharp text-xl fa-solid fa-coins"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Payments</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(3)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5 cursor-pointer' onClick={()=> setAdminComponent(<Payments/>)}><i className="fa-sharp text-xl fa-solid fa-coins"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Payments</b></a> <i ref={pushRightArrowRef} onClick={() => rotate(3)} className="fa-solid text-sm fa-chevron-right cursor-pointer"></i> </li>
                 <span ref={pushDropdownRef} className='relative hidden text-gray-300 px-4 items-start justify-center flex-col gap-3.5 t-0 w-full'>
-                    <a className='cursor-pointer pl-4' href="">Payment Methods</a>
-                    <a className='cursor-pointer pl-4' href="">Invoice List</a>
-                    <a className='cursor-pointer pl-4' href="">Invoice Details</a>
+                    <a className='cursor-pointer pl-4' >Payment Methods</a>
+                    <a className='cursor-pointer pl-4' >Invoice List</a>
+                    <a className='cursor-pointer pl-4' >Invoice Details</a>
                 </span>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Supports"><i className="fa-solid text-xl fa-comment-dots"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Supports</b></a> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100 cursor-pointer' onClick={()=> setAdminComponent(<Support/>)}><a className='flex items-center justify-center gap-2.5'><i className="fa-solid text-xl fa-comment-dots"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Supports</b></a> </li>
 
-                <li className=' flex items-center justify-between w-full text-cyan-100'><a className='flex items-center justify-center gap-2.5' href="/AdminPanel/Settings"><i className="fa-sharp text-xl fa-solid fa-gear"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Settings</b></a> </li>
+                <li className=' flex items-center justify-between w-full text-cyan-100 cursor-pointer' onClick={()=> setAdminComponent(<Settings/>)}><a className='flex items-center justify-center gap-2.5'><i className="fa-sharp text-xl fa-solid fa-gear"></i><b className=' tracking-wide font-normal text-md' ref={pushHeadlines}>Settings</b></a> </li>
 
             </ul>
         </div>

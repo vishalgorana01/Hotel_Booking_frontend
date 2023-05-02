@@ -72,7 +72,7 @@ export default function Login() {
           sessionStorage.setItem("userId", resp.data._id);
 
           if(resp.data.isAdmin){
-            navigate("/AdminPanel/Dashboard")
+            navigate("/AdminPanel")
           }
           else{
             navigate("/Home");

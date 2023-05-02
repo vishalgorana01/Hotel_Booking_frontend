@@ -4,6 +4,7 @@ import styles from '../../../Assets/CSS/Admin.module.css'
 import AddRoom from '../Rooms/AddRoom';
 import Rooms from '../Rooms/Rooms';
 import utilities from '../../../Assets/Utility/utility';
+import swal from 'sweetalert';
 
 function AddHotel() {
     // const boxColor = 'rgb(0 22 55)';
@@ -355,6 +356,7 @@ function AddHotel() {
         axios.post(`${utilities.deploy_url}/api/hotels`, formData)
             .then((res) => {
                 console.log(res)
+                swal("Hotel Added!", "", "success");
             })
             .catch((err) => {
                 console.log(err)

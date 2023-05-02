@@ -7,8 +7,6 @@ function AddRoom(props) {
     const roomNameRef = useRef()
     // const 
 
-
-
     return (
         <>
             <div className='flex flex-col items-center justify-center mb-4 rounded-sm w-full px-3.5 py-3 text-cyan-100' style={{ border: `2px solid ${boxColor}`, backgroundColor: "#020d1e4a" }}>
