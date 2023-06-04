@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import styles from '../../Assets/CSS/Home.module.css'
 import QRCode from 'react-qr-code';
 import axios from 'axios';
@@ -87,12 +87,34 @@ function BookingSatus() {
         confirm: false,
     })
 
+    let check = true;
+    const confirmModelRef = useRef();
+
+    const hideShowConfirmModel = async (given_id) => {
+        console.log(given_id)
+        if (check && given_id != undefined) {
+            await axios.get(`${utilities.deploy_url}/api/requests/receivedOne/${given_id}`)
+                .then((resp) => {
+                    console.log(resp)
+                    confirmModelRef.current.style.display = 'flex';
+                    check = false;
+                })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+        else {
+            confirmModelRef.current.style.display = 'none';
+            check = true;
+        }
+    }
+
 
     const [data, setData] = useState([1, 2, 3, 4, 5])
 
     const getAllBookings = async () => {
         var userName = await axios.get(`${utilities.deploy_url}/api/users/${sessionStorage.getItem('userId')}`)
-        userName = userName.data.userName
+        userName = userName.data.userName;
         console.log(userName)
 
         try {
@@ -197,7 +219,7 @@ function BookingSatus() {
                                     <span className={`flex px-8 py-3.5 items-center justify-between w-full max-w-7xl`}>
                                         <span className='flex items-start gap-x-1 justify-center'>
                                             <h1 className='text-md text-black'>{k++}.</h1>
-                                            <span className='flex cursor-pointer flex-col items-start justify-center w-full'>
+                                            <span className='flex cursor-pointer flex-col items-start justify-center w-full' onClick={() => hideShowConfirmModel(ele._id)}>
                                                 <h1 className='text-md font-medium text-blue-600 underline underline-offset-2'>{ele.hotelName}</h1>
                                                 <h3 className='text-xs font-medium text-blue-800'>{ele.roomName}</h3>
                                             </span>
@@ -291,10 +313,11 @@ function BookingSatus() {
                     </div>
 
                     {/* Modal for inComplete Booking */}
-                    <div className='flex items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }}>
+                    <div className='hidden items-start justify-center fixed w-screen h-screen top-0 overflow-y-scroll py-12 z-20' style={{ backgroundColor: '#13161a7d' }} ref={confirmModelRef}>
                         <div className='flex flex-col items-center justify-center relative px-3 sm:px-6 py-9 h-auto rounded-sm w-full max-w-5xl' style={{ border: '2px solid red', backgroundColor: 'ghostwhite' }}>
 
-                            <i className='fa-solid fa-xmark text-red-700 font-bold text-xl cursor-pointer absolute right-2 top-1'></i>
+                            <i className='fa-solid fa-xmark text-red-700 font-bold text-xl cursor-pointer absolute right-2 top-1' onClick={() => hideShowConfirmModel()}></i>
+
                             <span className='flex items-center gap-y-10 justify-start flex-col w-full'>
                                 <span className='flex flex-col items-start gap-x-5 gap-y-3 py-6 px-6 justify-center w-full md:flex-row' style={{ backgroundColor: '#00800033' }}>
                                     <span className='flex items-start md:justify-center w-28'><i style={{ fontSize: '5.5rem' }} className="fa-sharp text-green-600 fa-solid fa-clipboard-check"></i></span>
@@ -325,12 +348,12 @@ function BookingSatus() {
 
                                         <span className='flex flex-col items-start gap-y-2 justify-center w-full'>
                                             <label htmlFor="" className='text-lg text-black font-semibold'>Get an email remainder</label>
-                                            <input type="email" className='text-black rounded-md outline-none px-2 py-1.5 w-full max-w-sm' style={{border: '2px solid #00000085'}} />
+                                            <input type="email" className='text-black rounded-md outline-none px-2 py-1.5 w-full max-w-sm' style={{ border: '2px solid #00000085' }} />
                                         </span>
 
                                         <span className='flex items-center gap-y-2 gap-x-3 justify-start w-full'>
-                                        <button className='text-lg text-blue-500 rounded-md font-semibold py-2 px-3' style={{ border: '2px solid #3B82F6' }}>set remainder</button>
-                                        <button className='text-lg text-gray-500 rounded-md font-semibold py-2 px-3' style={{ border: '2px solid #00000085' }}>Set Calendar Event</button>
+                                            <button className='text-lg text-blue-500 rounded-md font-semibold py-2 px-3' style={{ border: '2px solid #3B82F6' }}>set remainder</button>
+                                            <button className='text-lg text-gray-500 rounded-md font-semibold py-2 px-3' style={{ border: '2px solid #00000085' }}>Set Calendar Event</button>
                                         </span>
                                     </span>
 

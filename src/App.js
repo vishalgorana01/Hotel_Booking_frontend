@@ -12,6 +12,8 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Booking from "./Pages/Booking";
 import YourBookings from "./Pages/YourBookings";
+import ForgotPassword from "./Pages/ForgotPassword";
+import ResetPassword from "./Pages/ResetPassword";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/" element={<Landing/>}/>
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login/>}/>
+          <Route path="forgotPassword" element={<ForgotPassword/>}/>
+          <Route path="ResetPassword" element={<ResetPassword/>}/>
           <Route path='Home' element={<Home/>}></Route>
           <Route path='Description' element={<HotelDescription/>}></Route>
           <Route path='HotelsByDestination' element={<HotelsByLocation/>}></Route>

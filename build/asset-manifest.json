@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5060907.css",
-    "main.js": "/static/js/main.9c838b97.js",
+    "main.css": "/static/css/main.2aea25b8.css",
+    "main.js": "/static/js/main.31e0d73c.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/hotel1.jpg": "/static/media/hotel1.863847386779031c2646.jpg",
     "static/media/sunset-pool.jpg": "/static/media/sunset-pool.29398abae160242f8bdd.jpg",
@@ -16,13 +16,14 @@
     "static/media/Testimoials1.png": "/static/media/Testimoials1.f8eaa2e8e7944e43caa2.png",
     "static/media/Testimoials5.png": "/static/media/Testimoials5.043a851b3b1ece4d5c4d.png",
     "static/media/Testimoials2.png": "/static/media/Testimoials2.692fde843f00a4e4eba8.png",
+    "static/media/logo.png": "/static/media/logo.3eef6f0fdf17ba96dd15.png",
     "index.html": "/index.html",
-    "main.a5060907.css.map": "/static/css/main.a5060907.css.map",
-    "main.9c838b97.js.map": "/static/js/main.9c838b97.js.map",
+    "main.2aea25b8.css.map": "/static/css/main.2aea25b8.css.map",
+    "main.31e0d73c.js.map": "/static/js/main.31e0d73c.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5060907.css",
-    "static/js/main.9c838b97.js"
+    "static/css/main.2aea25b8.css",
+    "static/js/main.31e0d73c.js"
   ]
 }

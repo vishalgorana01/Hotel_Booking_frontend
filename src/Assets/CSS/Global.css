@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Login.jsx */
+
+
+/* ForgotPassword.jsx */
+.FP_bg{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../Images/twig-near-ceramic-cups.jpg');
+    background-color: #000000b8;
+    background-blend-mode: darken;
+}

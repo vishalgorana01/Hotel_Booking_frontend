@@ -56,7 +56,7 @@ export default function Landing() {
 
       {/* <AboutUs /> */}
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Footer */}
       <GuestFooter />

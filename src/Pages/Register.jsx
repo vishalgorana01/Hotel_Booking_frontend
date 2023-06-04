@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react'
 import axios from 'axios'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+
+import logo from '../Assets/Images/logo.png'
 
 // import css files
 import styles from "../Assets/CSS/Register.module.css"
@@ -22,18 +24,18 @@ export default function Register() {
   const inputPassword = useRef();
   const emptyPassword = useRef();
   const emailhandleClick = (e) => {
-    if(emptyemail.current.style.display === "inline"){
+    if (emptyemail.current.style.display === "inline") {
       emptyemail.current.style.display = "none";
     }
   }
 
-  const passwordhandleClick = ()=>{
+  const passwordhandleClick = () => {
     if (emptyPassword.current.style.display === "inline") {
       emptyPassword.current.style.display = "none";
     }
   }
 
-  const usernamehandleClick = ()=>{
+  const usernamehandleClick = () => {
     if (emptyUserName.current.style.display === "inline") {
       emptyUserName.current.style.display = "none";
     }
@@ -59,10 +61,10 @@ export default function Register() {
           console.log(res);
           navigate("/login")
         })
-        .catch((err)=>{
+        .catch((err) => {
           // console.log(err)
-          if(err.response.status === 500){
-            if(err.response.data.message.includes("duplicate key error collection")){
+          if (err.response.status === 500) {
+            if (err.response.data.message.includes("duplicate key error collection")) {
               console.log("username or email not available")
             }
           }
@@ -74,7 +76,7 @@ export default function Register() {
       if (inputemail.current.value === "") {
         emptyemail.current.style.display = "inline";
       }
-      else if(!user.userEmail.includes("@gmail.com")){
+      else if (!user.userEmail.includes("@gmail.com")) {
         emptyemail.current.style.display = "inline";
         emptyemail.current.innerHTML = "invalid email !"
       }
@@ -95,6 +97,10 @@ export default function Register() {
 
     <section className={styles.register}>
       <div className={styles.container}>
+        <span className='flex w-full items-center justify-center'>
+          <img className='h-20 w-20' src={logo} alt="logo" />
+          <p className=' -ml-2.5 text-cyan-500 tracking-widest'>OTELIO</p>
+        </span>
         <form action="post" className={styles.form}>
           <label htmlFor="" className={styles.labels}>
             <i className={`${styles.icons} fa-solid fa-user`}></i>
@@ -111,7 +117,7 @@ export default function Register() {
             <input className={styles.inputs} type="text" name='password' value={user.password} id={styles.userName} placeholder='password' onChange={handleChange} ref={inputPassword} onClick={passwordhandleClick} />
             <p className={styles.wrongInput} ref={emptyPassword}>*required</p>
           </label>
-          <button type='button' className={`w-64 sm:w-3/5 py-2.5 px-3 text-lg text-center text-white`} style={{backgroundColor: 'brown', borderRadius: '350px'}} onClick={register} >Sign up</button>
+          <button type='button' className={`w-64 sm:w-3/5 py-2.5 px-3 text-lg text-center text-white`} style={{ backgroundColor: 'brown', borderRadius: '350px' }} onClick={register} >Sign up</button>
         </form>
       </div>
     </section>
